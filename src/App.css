@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "SourceSansProRegular";
+  src: url("assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.woff2") format('woff2'),
+       url("assets/fonts/Source_Sans_Pro/SourceSansPro-Regular.woff") format("woff");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "SourceSansProSemiBold";
+  src: url("assets/fonts/Source_Sans_Pro/SourceSansPro-SemiBold.woff2") format('woff2'),
+       url("assets/fonts/Source_Sans_Pro/SourceSansPro-SemiBold.woff") format("woff");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html, body {
+  overflow-x: hidden;
+}
+
+body {
+  background: #000000;
+  font-family:"SourceSansProRegular", Sans-Serif;
+  color: #F7F7F7;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.app-container {
+  max-width: 748px;
+  padding: 40px 20px;
+  margin: 0 auto;
+}
+
+.wa__view {
+  background: #3B3B3B;
+  border-radius: 20px;
+  padding: 40px 60px;
+  margin-bottom: 30px;
+}
+
+.wa__view-current-top, .wa__view-current-bottom {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.wa__view-current-bottom {
+  margin-top: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.wa__view-icon {
+  max-width: 100px;
+}
+
+.wa__view-location {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.wa__view-date {
+  font-size: 30px;
+}
+
+.wa__view-weather-temp {
+  font-size: 60px;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wa__view-weather-desc {
+  font-size: 20px;
+}
+
+.wa__view-hourly-container, .wa__view-daily-container {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.wa__view-hour-degrees {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.wa__view-hour-time {
+  font-size: 18px;
+}
+
+.wa__view-hour-hour, .wa__view-daily-day{
+  font-size: 25px;
+  margin: 5px 0;
+  display: block;
+  font-weight: bold;
+}
+
+.wa__view-hour {
+  width: calc(25% - 40px);
+}
+
+.wa__view-hour-icon, .wa__view-hour-icon {
+  max-width: 65px;
+}
+
+.wa__view-hour-icon {
+  margin: 10px 0;
+}
+
+.wa__view-daily-low, .wa__view-daily-high {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .wa__view {
+    padding: 40px
   }
-  to {
-    transform: rotate(360deg);
+
+  .wa__view-hour {
+    width: calc(50% - 30px);
+    margin-bottom: 50px;
+  }
+
+  .wa__view-current-top, .wa__view-current-bottom {
+    flex-direction: column;
+  }
+
+  .wa__view-weather-temp {
+    justify-content: center;
+    margin-top: 25px;
   }
 }
