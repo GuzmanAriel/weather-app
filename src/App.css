@@ -75,6 +75,7 @@ img {
 
 .wa__view-weather-desc {
   font-size: 20px;
+  text-transform: capitalize;
 }
 
 .wa__view-hourly-container, .wa__view-daily-container {
@@ -101,7 +102,7 @@ img {
   font-weight: bold;
 }
 
-.wa__view-hour {
+.wa__view-hour, .wa__view-day {
   width: calc(25% - 40px);
 }
 
@@ -123,7 +124,7 @@ img {
     padding: 40px
   }
 
-  .wa__view-hour {
+  .wa__view-hour, .wa__view-day {
     width: calc(50% - 30px);
     margin-bottom: 50px;
   }
